@@ -52,5 +52,6 @@ I am still not sure whether I want to use Discord, email, Dropbox, or a combinat
 
 ### Tasker
 
-- Tasker apparently does not like .py files (even ones with proper shebangs), but I'm not sure whether it's a chmod issue or if it's something else. A normal bash file worked, so I might have to create bash veneers that call callable python and node.js files to actually get my webstuff done.
+- ~~Tasker apparently does not like .py files (even ones with proper shebangs), but I'm not sure whether it's a chmod issue or if it's something else. A normal bash file worked, so I might have to create bash veneers that call callable python and node.js files to actually get my webstuff done.~~
+	- Tasker can handle Python files just fine, you just have to make sure that your shebang points to your python install as though it's outside of the Termux app looking in. The correct shebang is: `#!/data/data/com.termux/files/usr/bin/env python3`
 - I believe that Termux is not able to change settings within my phone's alarm clock app, but I did find a thread on reddit that suggested that I could point the app to a file that Termux can edit. I will have to see whether the alarm clock app can access files in Termux's app folders.
